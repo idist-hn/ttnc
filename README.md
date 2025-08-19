@@ -25,52 +25,36 @@ Dự án này được phát triển để nghiên cứu và so sánh hiệu su�
 ```
 ttnc/
 ├── README.md
+├── algorithm-classification.md
 ├── docs/
-└── sources/
-    ├── go.mod
-    ├── main.go
+├── golang/ (Go)
+│   ├── go.mod
+│   ├── main.go
+│   └── algorithms/
+│       ├── brute-force.go                          ✅ Hoàn thành
+│       ├── alpha-skip-search.go                    🔄 Đang phát triển
+│       ├── boyer-moore.go                          🔄 Đang phát triển
+│       ├── kunth-morris-pratt.go                   🔄 Đang phát triển
+│       └── ... (29 thuật toán khác)               🔄 Đang phát triển
+├── php/ (PHP)
+│   ├── composer.json
+│   ├── main.php
+│   └── algorithms/
+│       └── BruteForce.php                          ✅ Hoàn thành
+└── nodejs/ (Node.js)
+    ├── package.json
+    ├── main.js
     └── algorithms/
-        ├── alpha-skip-search.go                    🔄 Đang phát triển
-        ├── apostolico-crochemore.go                🔄 Đang phát triển
-        ├── apostolico-giancarlo.go                 🔄 Đang phát triển
-        ├── backward-oracle-matching.go             🔄 Đang phát triển
-        ├── berry-ravindran.go                      🔄 Đang phát triển
-        ├── boyer-moore.go                          🔄 Đang phát triển
-        ├── brute-force.go                          ✅ Hoàn thành
-        ├── colussi.go                              🔄 Đang phát triển
-        ├── forward-dawg-matching.go                🔄 Đang phát triển
-        ├── galil-giancarlo.go                      🔄 Đang phát triển
-        ├── galil-seiferas.go                       🔄 Đang phát triển
-        ├── horspool.go                             🔄 Đang phát triển
-        ├── karp-rabin.go                           🔄 Đang phát triển
-        ├── kmpskip-search.go                       🔄 Đang phát triển
-        ├── kunth-morris-pratt.go                   🔄 Đang phát triển
-        ├── maximal-shift.go                        🔄 Đang phát triển
-        ├── morris-pratt.go                         🔄 Đang phát triển
-        ├── not-so-naive.go                         🔄 Đang phát triển
-        ├── optimal-mismatch.go                     🔄 Đang phát triển
-        ├── quick-search.go                         🔄 Đang phát triển
-        ├── raita.go                                🔄 Đang phát triển
-        ├── reverse-colussi.go                      🔄 Đang phát triển
-        ├── reverse-factor.go                       🔄 Đang phát triển
-        ├── search-with-an-automaton.go             🔄 Đang phát triển
-        ├── shift-or.go                             🔄 Đang phát triển
-        ├── simon.go                                🔄 Đang phát triển
-        ├── skip-search.go                          🔄 Đang phát triển
-        ├── smith.go                                🔄 Đang phát triển
-        ├── string-matching-on-ordered-alphabets.go 🔄 Đang phát triển
-        ├── tuned-boyer-moore.go                    🔄 Đang phát triển
-        ├── turbo-bm.go                             🔄 Đang phát triển
-        ├── turbo-reverse-factor.go                 🔄 Đang phát triển
-        ├── two-way.go                              🔄 Đang phát triển
-        └── zhu-takaoka.go                          🔄 Đang phát triển
+        └── bruteForce.js                           ✅ Hoàn thành
 ```
 
 ### Mô tả các thư mục:
 
-- **`sources/`**: Chứa mã nguồn chính của dự án
-- **`sources/algorithms/`**: Chứa các thuật toán tìm kiếm chuỗi
+- **`golang/`**: Implementation bằng **Go** - ngôn ngữ chính của dự án
+- **`php/`**: Implementation bằng **PHP** - hỗ trợ web development
+- **`nodejs/`**: Implementation bằng **Node.js** - hỗ trợ JavaScript ecosystem
 - **`docs/`**: Tài liệu dự án
+- **`algorithm-classification.md`**: Bảng phân loại chi tiết các thuật toán
 - **`README.md`**: File mô tả dự án này
 
 ## 🧮 Thuật toán đã triển khai
@@ -83,7 +67,7 @@ ttnc/
 - **Độ phức tạp thời gian**: O(n×m) trong trường hợp xấu nhất, O(n+m) trong trường hợp tốt nhất
 - **Độ phức tạp không gian**: O(1) - không sử dụng thêm bộ nhớ
 - **Trạng thái**: ✅ Đã triển khai hoàn chỉnh
-- **File**: `sources/algorithms/brute-force.go`
+- **File**: `golang/algorithms/brute-force.go`
 
 ### � Thư viện thuật toán String Matching
 
@@ -188,7 +172,9 @@ Dự án bao gồm **33 thuật toán** tìm kiếm chuỗi con khác nhau:
 ## 🚀 Cài đặt và chạy
 
 ### Yêu cầu hệ thống:
-- Go 1.24.1 hoặc cao hơn
+- **Go**: 1.24.1 hoặc cao hơn
+- **PHP**: 7.4 hoặc cao hơn
+- **Node.js**: 14.0.0 hoặc cao hơn
 
 ### Các bước cài đặt:
 
@@ -198,14 +184,28 @@ Dự án bao gồm **33 thuật toán** tìm kiếm chuỗi con khác nhau:
    cd ttnc
    ```
 
-2. **Chuyển vào thư mục sources:**
+2. **Chọn ngôn ngữ và chạy:**
+
+   #### 🐹 Go (Ngôn ngữ chính)
    ```bash
    cd sources
+   go run main.go
    ```
 
-3. **Chạy chương trình:**
+   #### 🐘 PHP
    ```bash
-   go run main.go
+   cd php
+   composer install  # (tùy chọn)
+   php main.php
+   ```
+
+   #### 🟨 Node.js
+   ```bash
+   cd nodejs
+   npm install        # (tùy chọn)
+   npm start
+   # hoặc
+   node main.js
    ```
 
 ## 💻 Sử dụng
@@ -240,38 +240,67 @@ Kết thúc
 
 ## 🔧 API Reference
 
-### Package `algorithms`
+### 🐹 Go Implementation
 
-#### `BruteForce(source, target string) (exist bool, index int)`
+#### Package `algorithms`
 
-**Mô tả**: Tìm kiếm chuỗi con bằng thuật toán Brute Force - thuật toán tìm kiếm chuỗi con đơn giản nhất, so sánh từng ký tự của chuỗi target với chuỗi source một cách tuần tự.
+```go
+func BruteForce(source, target string) (exist bool, index int)
+```
+
+### 🐘 PHP Implementation
+
+#### Class `Algorithms\BruteForce`
+
+```php
+// Tìm kiếm cơ bản
+BruteForce::search(string $source, string $target): array
+// Returns: ['exist' => bool, 'index' => int]
+
+// Tìm tất cả vị trí
+BruteForce::searchAll(string $source, string $target): array
+// Returns: [int] - mảng các vị trí
+
+// Đếm số lần xuất hiện
+BruteForce::count(string $source, string $target): int
+```
+
+### 🟨 Node.js Implementation
+
+#### Class `BruteForce`
+
+```javascript
+// Tìm kiếm cơ bản
+BruteForce.search(source, target)
+// Returns: {exist: boolean, index: number}
+
+// Tìm tất cả vị trí
+BruteForce.searchAll(source, target)
+// Returns: number[] - mảng các vị trí
+
+// Đếm số lần xuất hiện
+BruteForce.count(source, target)
+// Returns: number
+
+// Tìm kiếm với progress callback
+BruteForce.searchWithProgress(source, target, onProgress)
+// onProgress: (current, total) => void
+```
+
+### 📋 Thông số chung
 
 **Độ phức tạp**:
 - **Thời gian**: O(n×m) trong trường hợp xấu nhất, O(n+m) trong trường hợp tốt nhất
-- **Không gian**: O(1) - không sử dụng thêm bộ nhớ, chỉ sử dụng các biến cục bộ
+- **Không gian**: O(1) - không sử dụng thêm bộ nhớ
 
 **Tham số**:
 - `source`: Chuỗi nguồn để tìm kiếm (độ dài n)
 - `target`: Chuỗi đích cần tìm (độ dài m)
 
-**Trả về**:
-- `exist`: `true` nếu tìm thấy, `false` nếu không tìm thấy
-- `index`: Vị trí bắt đầu của chuỗi con (hoặc -1 nếu không tìm thấy)
-
 **Đặc điểm**:
-- Không sử dụng đệ quy
-- Không sử dụng cấu trúc dữ liệu phức tạp
-- Không sử dụng hàm gọi hàm
 - Thuật toán đơn giản và dễ hiểu
-
-### Các thuật toán khác
-
-Tất cả 32 thuật toán còn lại đều có cùng signature:
-```go
-func AlgorithmName(source, target string) (exist bool, index int)
-```
-
-Mỗi thuật toán đều có documentation chi tiết về độ phức tạp và đặc điểm riêng.
+- Không sử dụng cấu trúc dữ liệu phức tạp
+- Reliable và predictable performance
 
 ## 🤝 Đóng góp
 

@@ -1,0 +1,26 @@
+{
+  "name": "string-matching-algorithms",
+  "version": "1.0.0",
+  "description": "String matching algorithms implementation in Node.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node test/bruteForce.test.js",
+    "dev": "nodemon main.js"
+  },
+  "keywords": [
+    "string-matching",
+    "algorithms",
+    "brute-force",
+    "pattern-matching",
+    "search"
+  ],
+  "author": "Idist-hn",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

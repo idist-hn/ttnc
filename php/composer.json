@@ -1,0 +1,40 @@
+{
+    "name": "idist-hn/string-matching-algorithms",
+    "description": "String matching algorithms implementation in PHP",
+    "type": "project",
+    "keywords": [
+        "string-matching",
+        "algorithms",
+        "brute-force",
+        "pattern-matching",
+        "search"
+    ],
+    "authors": [
+        {
+            "name": "Idist-hn",
+            "email": "idist.hn@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Algorithms\\": "algorithms/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "start": "php main.php",
+        "test": "phpunit tests/"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
