@@ -77,6 +77,9 @@ ttnc/
 
 ### ✅ Brute Force Algorithm
 - **Mô tả**: Thuật toán tìm kiếm đơn giản nhất, so sánh từng ký tự một cách tuần tự
+- **Phân loại**:
+  - 🔤 **Thuật toán cơ bản** (đơn giản, dễ hiểu, cơ sở cho các thuật toán khác)
+  - ➡️ **From Left to Right** (so sánh từ đầu pattern đến cuối)
 - **Độ phức tạp thời gian**: O(n×m) trong trường hợp xấu nhất, O(n+m) trong trường hợp tốt nhất
 - **Độ phức tạp không gian**: O(1) - không sử dụng thêm bộ nhớ
 - **Trạng thái**: ✅ Đã triển khai hoàn chỉnh
@@ -125,6 +128,58 @@ Dự án bao gồm **33 thuật toán** tìm kiếm chuỗi con khác nhau:
 - **Shift-Or** - `shift-or.go`
 - **String Matching on Ordered Alphabets** - `string-matching-on-ordered-alphabets.go`
 - **Turbo Reverse Factor** - `turbo-reverse-factor.go`
+
+## 🔄 Phân loại theo hướng tìm kiếm
+
+### ➡️ From Left to Right (Từ trái sang phải)
+*Thuật toán so sánh ký tự từ đầu pattern đến cuối*
+
+- **Brute Force** - `brute-force.go` ✅ **Hoàn thành**
+- **Knuth-Morris-Pratt** - `kunth-morris-pratt.go`
+- **Morris-Pratt** - `morris-pratt.go`
+- **Karp-Rabin** - `karp-rabin.go`
+- **Shift-Or** - `shift-or.go`
+- **Colussi** - `colussi.go`
+- **Galil-Giancarlo** - `galil-giancarlo.go`
+- **Apostolico-Crochemore** - `apostolico-crochemore.go`
+- **Not So Naive** - `not-so-naive.go`
+
+### ⬅️ From Right to Left (Từ phải sang trái)
+*Thuật toán so sánh ký tự từ cuối pattern về đầu*
+
+- **Boyer-Moore** - `boyer-moore.go`
+- **Horspool** - `horspool.go`
+- **Quick Search** - `quick-search.go`
+- **Tuned Boyer-Moore** - `tuned-boyer-moore.go`
+- **Zhu-Takaoka** - `zhu-takaoka.go`
+- **Berry-Ravindran** - `berry-ravindran.go`
+- **Smith** - `smith.go`
+- **Raita** - `raita.go`
+- **Reverse Colussi** - `reverse-colussi.go`
+- **Turbo BM** - `turbo-bm.go`
+- **Apostolico-Giancarlo** - `apostolico-giancarlo.go`
+
+### 🎯 In a Specific Order (Theo thứ tự cụ thể)
+*Thuật toán so sánh ký tự theo thứ tự được định trước*
+
+- **Optimal Mismatch** - `optimal-mismatch.go`
+- **Maximal Shift** - `maximal-shift.go`
+- **Skip Search** - `skip-search.go`
+- **KMP Skip Search** - `kmpskip-search.go`
+- **Alpha Skip Search** - `alpha-skip-search.go`
+- **Simon** - `simon.go`
+- **String Matching on Ordered Alphabets** - `string-matching-on-ordered-alphabets.go`
+
+### 🔀 In Any Order (Theo thứ tự bất kỳ)
+*Thuật toán có thể so sánh ký tự theo nhiều thứ tự khác nhau*
+
+- **Two Way** - `two-way.go`
+- **Reverse Factor** - `reverse-factor.go`
+- **Turbo Reverse Factor** - `turbo-reverse-factor.go`
+- **Forward DAWG Matching** - `forward-dawg-matching.go`
+- **Backward Oracle Matching** - `backward-oracle-matching.go`
+- **Search with Automaton** - `search-with-an-automaton.go`
+- **Galil-Seiferas** - `galil-seiferas.go`
 
 ### 🚧 Trạng thái triển khai:
 - ✅ **Brute Force**: Hoàn thành
