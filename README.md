@@ -146,11 +146,11 @@ Dự án bao gồm **33 thuật toán** tìm kiếm chuỗi con khác nhau:
 ### 🎯 In a Specific Order (Theo thứ tự cụ thể)
 *Thuật toán so sánh ký tự theo thứ tự được định trước*
 
+- **Alpha Skip Search** - `alpha-skip-search.go` ✅ **Hoàn thành**
 - **Optimal Mismatch** - `optimal-mismatch.go`
 - **Maximal Shift** - `maximal-shift.go`
 - **Skip Search** - `skip-search.go`
 - **KMP Skip Search** - `kmpskip-search.go`
-- **Alpha Skip Search** - `alpha-skip-search.go`
 - **Simon** - `simon.go`
 - **String Matching on Ordered Alphabets** - `string-matching-on-ordered-alphabets.go`
 
@@ -166,8 +166,9 @@ Dự án bao gồm **33 thuật toán** tìm kiếm chuỗi con khác nhau:
 - **Galil-Seiferas** - `galil-seiferas.go`
 
 ### 🚧 Trạng thái triển khai:
-- ✅ **Brute Force**: Hoàn thành
-- 🔄 **32 thuật toán khác**: Đang trong quá trình triển khai (skeleton code đã sẵn sàng)
+- ✅ **Brute Force**: Hoàn thành (Go, PHP, Node.js)
+- ✅ **Alpha-Skip Search**: Hoàn thành (Go, PHP, Node.js)
+- 🔄 **31 thuật toán khác**: Đang trong quá trình triển khai (skeleton code đã sẵn sàng)
 
 ## 🚀 Cài đặt và chạy
 

@@ -1,5 +1,6 @@
 const readline = require('readline');
 const BruteForce = require('./algorithms/bruteForce');
+const AlphaSkipSearch = require('./algorithms/alphaSkipSearch');
 
 /**
  * Chương trình chính để test thuật toán Brute Force
@@ -21,22 +22,47 @@ console.log("Thuật toán: Brute Force\n");
  */
 function runBruteForce(source, target) {
     console.log("=== Bắt đầu thuật toán Brute Force ===");
-    
+
     const startTime = process.hrtime.bigint();
     const result = BruteForce.search(source, target);
     const endTime = process.hrtime.bigint();
-    
+
     const executionTime = Number(endTime - startTime) / 1000000; // Convert to milliseconds
-    
+
     console.log("--- Kết quả Brute Force ---");
     if (result.exist) {
         console.log(`Brute Force: Chuỗi target tồn tại trong chuỗi source, bắt đầu từ vị trí ${result.index}`);
     } else {
         console.log("Brute Force: Chuỗi target không tồn tại trong chuỗi source");
     }
-    
+
     console.log(`Brute Force: Thời gian chạy ${executionTime.toFixed(3)} ms`);
     console.log("=== Kết thúc thuật toán Brute Force ===\n");
+}
+
+/**
+ * Chạy thuật toán Alpha-Skip Search và đo thời gian
+ * @param {string} source - Chuỗi nguồn
+ * @param {string} target - Chuỗi đích
+ */
+function runAlphaSkipSearch(source, target) {
+    console.log("=== Bắt đầu thuật toán Alpha-Skip Search ===");
+
+    const startTime = process.hrtime.bigint();
+    const result = AlphaSkipSearch.search(source, target);
+    const endTime = process.hrtime.bigint();
+
+    const executionTime = Number(endTime - startTime) / 1000000; // Convert to milliseconds
+
+    console.log("--- Kết quả Alpha-Skip Search ---");
+    if (result.exist) {
+        console.log(`Alpha-Skip Search: Chuỗi target tồn tại trong chuỗi source, bắt đầu từ vị trí ${result.index}`);
+    } else {
+        console.log("Alpha-Skip Search: Chuỗi target không tồn tại trong chuỗi source");
+    }
+
+    console.log(`Alpha-Skip Search: Thời gian chạy ${executionTime.toFixed(3)} ms`);
+    console.log("=== Kết thúc thuật toán Alpha-Skip Search ===\n");
 }
 
 /**
@@ -111,7 +137,10 @@ async function main() {
         
         // Chạy thuật toán chính
         runBruteForce(source, target);
-        
+
+        // Chạy thuật toán Alpha-Skip Search
+        runAlphaSkipSearch(source, target);
+
         // Chạy test bổ sung
         runAdditionalTests(source, target);
         
